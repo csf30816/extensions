@@ -34,3 +34,16 @@ function onLoginFailed() {
   $scope.message.text = 'invalid credentials';
   $scope.loading = false;
 }
+/* ===== ./login/login.js ===== */
+$scope.signup = function () {
+  $scope.message = 'loading...';
+ $scope.loading = true;
+ auth.signup({
+   connection: 'Username-Password-Authentication',
+   username: $scope.user,
+   password: $scope.pass,
+   authParams: {
+     scope: 'openid name email'
+   }
+ }, onLoginSuccess, onLoginFailed);
+}
