@@ -1,1 +1,8 @@
+//Font's
+@import 'https://fonts.googleapis.com/css?family=Tillana:400,500';
 
+.header {
+  text-align: center;
+  color: #FAB400;
+  font-family: 'Tillana', cursive;
+}
