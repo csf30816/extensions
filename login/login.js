@@ -11,3 +11,26 @@ $scope.login = function () {
      }
    }, onLoginSuccess, onLoginFailed);
  };
+/* ===== ./login/login.js ===== */
+$scope.googleLogin = function () {
+  $scope.message = 'loading...';
+  $scope.loading = true;
+
+  auth.signin({
+    popup: true,
+    connection: 'google-oauth2',
+    scope: 'openid name email'
+  }, onLoginSuccess, onLoginFailed);
+};
+/* ===== ./login/login.js ===== */
+function onLoginSuccess(profile, token) {
+  $scope.message.text = '';
+  store.set('profile', profile);
+  store.set('token', token);
+  $location.path('/');
+  $scope.loading = false;
+}
+function onLoginFailed() {
+  $scope.message.text = 'invalid credentials';
+  $scope.loading = false;
+}
