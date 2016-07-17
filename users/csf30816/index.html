@@ -83,7 +83,13 @@
         text-decoration: none;
       }
       .play {
-      background-image: url("/extensions/play.png");
+        background-image: url("/extensions/play.png");
+        background-repeat: no-repeat;
+        background-size: 15px 15px;
+        color: transparent
+      }
+      .raw {
+        background-image: url("/extensions/raw.png");
         background-repeat: no-repeat;
         background-size: 15px 15px;
         color: transparent
@@ -112,7 +118,7 @@
     <script>
       function myFunction(i) {
         var thing = "http://scratchx.org/?url=https://raw.githubusercontent.com/csf30816/extensions/gh-pages/users/csf30816/" + i + ".js"
-        document.getElementById("box").innerHTML = "<span class='play'>pla</span><a href='" + thing + "'>Run it on ScratchX</a>";
+        document.getElementById("box").innerHTML = "<span class='play'>pla</span><a href='" + thing + "'>Run it on ScratchX</a>, <span class='raw'>pla</span><a href='" + thing + "'>View Raw data</a>"";
       }
     </script>
   </body>
