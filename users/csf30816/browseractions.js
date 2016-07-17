@@ -96,5 +96,4 @@ url: 'https://gist.githubusercontent.com/anonymous/1ec6455373e830b14909/raw/317c
 	//ext.googleS = function(url) {window.open("https://www.google.com/webhp?authuser=1#authuser=1&q=" + url)};
 	
 	ScratchExtensions.register("Browser Actions", descriptor, ext);
-	
 })();
