@@ -111,7 +111,8 @@
     
     <script>
       function myFunction(i) {
-        document.getElementById("box").innerHTML = "<span class='play'>pla</span><a href='http://scratchx.org/?url=https://raw.githubusercontent.com/csf30816/extensions/gh-pages/users/csf30816/" + i + ".js'>Run it on ScratchX</a>";
+        var thing = "http://scratchx.org/?url=https://raw.githubusercontent.com/csf30816/extensions/gh-pages/users/csf30816/" + i + ".js"
+        document.getElementById("box").innerHTML = "<span class='play'>pla</span><a href='" + thing + "'>Run it on ScratchX</a>";
       }
     </script>
   </body>
