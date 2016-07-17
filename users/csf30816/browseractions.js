@@ -22,7 +22,7 @@ new (function() {
 			[" ", "Open %m.links", "openLink", "link"],
 			[" ", "Open %m.links in new tab", "openLinkNewTab", "link"],
 			[" ", "Safe Search https://scratch.mit.edu/ %s", "openScratch", "project/xxxxx"],
-			[" ", "Scratch Search %m.options for %s", "searchScratch", "search"],
+			[" ", "Scratch Search %m.options for %s", "searchScratch", "projects", "Search"],
 			[" ", "Change browser to %m.costumes", "searchB", "Browser"],
 			["b", "Change browser to %m.costumes", "searchB", "Browser"],
 			[" ", "Safe Search https://scratchx.org/ %s", "openScratchX", "project/xxxxx"],
