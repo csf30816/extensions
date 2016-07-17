@@ -22,7 +22,7 @@ new (function() {
 			[" ", "Open %m.links", "openLink", "link"],
 			[" ", "Open %m.links in new tab", "openLinkNewTab", "link"],
 			[" ", "Safe Search https://scratch.mit.edu/ %s", "openScratch", "project/xxxxx"],
-			[" ", "Scratch Search %s", "searchScratch", "search"],
+			[" ", "Scratch Search %m.options for %s", "searchScratch", "search"],
 			[" ", "Change browser to %m.costumes", "searchB", "Browser"],
 			["b", "Change browser to %m.costumes", "searchB", "Browser"],
 			[" ", "Safe Search https://scratchx.org/ %s", "openScratchX", "project/xxxxx"],
@@ -35,6 +35,7 @@ new (function() {
 				links: ["scratch.mit.edu", "scratchx.org", "khanacademy.org"],
 				costumes: ["bing", "google", "yahoo", "ask"],
 				returnVal: ["Title", "URL", "Content", "All"],
+				options: ["studios", "projects"]
 			},
 url: 'https://gist.githubusercontent.com/anonymous/1ec6455373e830b14909/raw/317c028d794c272202d57abbc44905a387b1e8a0/extension.js'
 			};
@@ -55,8 +56,8 @@ url: 'https://gist.githubusercontent.com/anonymous/1ec6455373e830b14909/raw/317c
 	ext.openScratch = function(url) {
 		window.open("http://scratch.mit.edu/" + url)
 	};
-	ext.searchScratch = function(url) {
-		window.open("https://scratch.mit.edu/search/google_results/?q=" + url)
+	ext.searchScratch = function(opt, url) {
+		window.open("https://scratch.mit.edu/search/" + opt + "?q=" + url)
 	};
 	ext.searchB = function(url) {
 		window.open("http://" + url + ".com")
