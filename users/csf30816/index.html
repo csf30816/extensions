@@ -6,7 +6,11 @@
     <link rel="shortcut icon" href="/extensions/favicon.ico">
     
     <!--CSS and JS imports-->
-    <script src="/extensions/users/open.js"></script>
+    <script>
+      function open(i) {
+        documen.getElementById("box").innerHtml = '<a href="https://scratchx.org/?http://csf30816.github.io/extensions/users/csf30816/' + i + '" >ScratchX</a>'
+      }
+    </script>
     
     <!--Font's-->
     <link href="https://fonts.googleapis.com/css?family=Tillana:400,500" rel="stylesheet">
@@ -69,6 +73,9 @@
         background-color: rgb(36, 161, 224);
         cursor: pointer;
       }
+      #box {
+        width: 100px;
+      }
     </style>
     <div class="header">
     <img height="50px" class="img" src="/extensions/Scratchext.png">
@@ -83,6 +90,7 @@
       <h4 style="margin-top: 0px; margin-bottom: 0px;">Csf30816's Extensions</h4>
       </div>
       <div class="content">
+        <div id="box"></div>
         <button class="button" onClick="open(browseractions.js)">Browser Actions</button>
       </div>
     </div>
