@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Title/Favicon-->
+    <title>Scratch Extensions</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    
+    <!--CSS and JS imports-->
+    
+    
+    <!--Font's-->
+    <link href="https://fonts.googleapis.com/css?family=Tillana:400,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+  </head>
+  <body>
+    <!--CSS-->
+    <style>
+      .header {
+        margin-top: 0;
+        top: 0;
+        left: 0;
+        position: fixed;
+        width: 100%;
+        height: 60px;
+        text-align: center;
+        color: #FAB400;
+        font-family: 'Tillana', cursive;
+        text-shadow: 0px 0px 6px #fcfcfc;
+        background-color: rgba(37, 175, 244, 1);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.44);
+      }
+      .img {
+        padding: 5px;
+      }
+      body {
+        background-color: #fcfcfc;
+      }
+      .body {
+        width: 58.75em;
+        border-radius: 10px 10px 0 0;
+        border: 1px solid #d9d9d9;
+        background-color: #fff;
+      }
+      .head {
+        font-family: "Orbitron", Sans-Serif;
+        background-color: #f2f2f2;
+        height: 20px;
+        overflow: hidden;
+        border-radius: 10px 10px 0 0;
+        padding: 8px 20px;
+      }
+      .content {
+        text-align: left;
+        background-color: #fff;
+        height: auto;
+        padding: 8px 20px;
+      }
+    </style>
+    <div class="header">
+    <img height="50px" class="img" src="Scratchext.png">
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <center>
+    <div class="body">
+      <div class="head">
+      <h4 style="margin-top: 0px; margin-bottom: 0px;"></h4>
+      </div>
+      <div class="content">
+        
+      </div>
+    </div>
+    </center>
+  </body>
+</html>
