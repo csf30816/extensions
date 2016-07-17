@@ -7,6 +7,7 @@
     
     <!--CSS and JS imports-->
     
+    
     <!--Font's-->
     <link href="https://fonts.googleapis.com/css?family=Tillana:400,500" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
@@ -29,6 +30,13 @@
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.44);
       }
       .img {
+        transition: all .15s ease;
+        padding: 10px;
+        height: 40px;
+      }
+      .img:hover {
+        transition: all .15s ease;
+        height: 50px;
         padding: 5px;
       }
       body {
@@ -88,9 +96,15 @@
         background-size: 15px 15px;
         color: transparent
       }
+      .raw {
+        background-image: url("/extensions/raw.png");
+        background-repeat: no-repeat;
+        background-size: 15px 15px;
+        color: transparent
+      }
     </style>
     <div class="header">
-    <img height="50px" class="img" src="/extensions/Scratchext.png">
+    <a href="/extensions"><img class="img" src="/extensions/Scratchext.png"></a>
     </div>
     <br>
     <br>
@@ -103,14 +117,17 @@
       </div>
       <div class="content">
         <center><div id="box">No Extension Selected :)</div></center>
-        <button class="button" onclick="myFunction('')"></button>
+        <button class="button" onclick="myFunction('', '')"></button>
+        <button class="button" onclick="myFunction('', '')"></button>
       </div>
     </div>
     </center>
     
     <script>
-      function myFunction(i) {
-        document.getElementById("box").innerHTML = "<span class='play'>pla</span><a href='http://scratchx.org/?url=https://raw.githubusercontent.com/csf30816/extensions/gh-pages/users/csf30816/" + i + ".js'>Run it on ScratchX</a>";
+      function myFunction(i, a) {
+        var thing = "http://scratchx.org/?url=https://raw.githubusercontent.com/csf30816/extensions/gh-pages/users/..../" + i + ".js"
+        var thing2 = "https://raw.githubusercontent.com/csf30816/extensions/gh-pages/users/..../" + i + ".js"
+        document.getElementById("box").innerHTML = "<h2 style='margin-top: 0;'>" + a + "</h2><span class='play'>pla</span><a href='" + thing + "'>Run it on ScratchX</a>,  <span class='raw'>pla</span><a href='" + thing2 + "'>View raw data</a>";
       }
     </script>
   </body>
