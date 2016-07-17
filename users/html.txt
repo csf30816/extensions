@@ -7,7 +7,6 @@
     
     <!--CSS and JS imports-->
     
-    
     <!--Font's-->
     <link href="https://fonts.googleapis.com/css?family=Tillana:400,500" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
@@ -69,6 +68,26 @@
         background-color: rgb(36, 161, 224);
         cursor: pointer;
       }
+      #box {
+        width: 100%;
+        background-color: #d9edf7;
+        color: #3a87ad;
+        border-radius: 10px;
+        border: none;
+        padding: 10px;
+        width: 80%;
+        text-align: center;
+      }
+      #box, a {
+        color: #1aa0d8;
+        text-decoration: none;
+      }
+      .play {
+      background-image: url("/extensions/play.png");
+        background-repeat: no-repeat;
+        background-size: 15px 15px;
+        color: transparent
+      }
     </style>
     <div class="header">
     <img height="50px" class="img" src="/extensions/Scratchext.png">
@@ -80,12 +99,19 @@
     <center>
     <div class="body">
       <div class="head">
-      <h4 style="margin-top: 0px; margin-bottom: 0px;">Csf30816's Extensions</h4>
+      <h4 style="margin-top: 0px; margin-bottom: 0px;">'s Extensions</h4>
       </div>
       <div class="content">
-        <button class="button" onClick="open()"></button>
+        <center><div id="box">No Extension Selected :)</div></center>
+        <button class="button" onclick="myFunction('')"></button>
       </div>
     </div>
     </center>
+    
+    <script>
+      function myFunction(i) {
+        document.getElementById("box").innerHTML = "<span class='play'>pla</span><a href='http://scratchx.org/?url=https://raw.githubusercontent.com/csf30816/extensions/gh-pages/users/csf30816/" + i + ".js'>Run it on ScratchX</a>";
+      }
+    </script>
   </body>
 </html>
