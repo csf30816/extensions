@@ -73,23 +73,6 @@
       </div>
     </div>
     </center>
-<script src="https://cdn.auth0.com/js/lock-9.1.min.js"></script>
-<script type="text/javascript">
-  
-  var lock = new Auth0Lock('Gr2fEa9c5GSdQpV3Ssm0OwJIQPXQCosi', 'swiftnews.auth0.com');
-  
-  
-  function signin() {
-    lock.show({
-        callbackURL: 'http://csf30816.github.io/extensions'
-      , responseType: 'code'
-      , authParams: {
-        scope: 'openid email'  // Learn about scopes: https://auth0.com/docs/scopes 
-      }
-    });
-  }
-</script>
-<button onclick="window.signin();">Login</button>
 
   </body>
 </html>
