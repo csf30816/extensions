@@ -6,6 +6,7 @@
     <link rel="shortcut icon" href="favicon.ico">
     
     <!--CSS and JS imports-->
+    <script src="https://cdn.auth0.com/js/lock-9.1.min.js"></script>
     
     <!--Font's-->
     <link href="https://fonts.googleapis.com/css?family=Tillana:400,500" rel="stylesheet">
@@ -73,6 +74,21 @@
       </div>
     </div>
     </center>
-
+<script type="text/javascript">
+  
+  var lock = new Auth0Lock('tMa3kXkEDhGZapWiiVMVLUKOvFjsTx9R', 'swiftnews.auth0.com');
+  
+  
+  function signin() {
+    lock.show({
+        callbackURL: 'https://csf30816.github.io/extensions/'
+      , responseType: 'code'
+      , authParams: {
+        scope: 'openid email'  // Learn about scopes: https://auth0.com/docs/scopes 
+      }
+    });
+  }
+</script>
+<button onclick="window.signin();">Login</button>
   </body>
 </html>
