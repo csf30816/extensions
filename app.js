@@ -25,3 +25,9 @@ app.get('/extension',
     }
     res.redirect("/user");
   });
+  
+  app.get('/user', function (req, res) {
+  res.render('user', {
+    user: req.user
+  });
+});
