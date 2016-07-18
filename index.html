@@ -6,7 +6,6 @@
     <link rel="shortcut icon" href="favicon.ico">
     
     <!--CSS and JS imports-->
-    <script src="https://cdn.auth0.com/w2/auth0-widget-5.js"></script>
     
     <!--Font's-->
     <link href="https://fonts.googleapis.com/css?family=Tillana:400,500" rel="stylesheet">
@@ -74,36 +73,23 @@
       </div>
     </div>
     </center>
-    <script type="text/javascript">
-    var widget = new Auth0Widget({
-        domain:                 'swiftnews.auth0.com',
-        clientID:               'Gr2fEa9c5GSdQpV3Ssm0OwJIQPXQCosi',
-        callbackURL:            'http://csf30816.github.io/extensions',
-        callbackOnLocationHash: true
+<script src="https://cdn.auth0.com/js/lock-9.1.min.js"></script>
+<script type="text/javascript">
+  
+  var lock = new Auth0Lock('Gr2fEa9c5GSdQpV3Ssm0OwJIQPXQCosi', 'swiftnews.auth0.com');
+  
+  
+  function signin() {
+    lock.show({
+        callbackURL: 'http://csf30816.github.io/extensions'
+      , responseType: 'code'
+      , authParams: {
+        scope: 'openid email'  // Learn about scopes: https://auth0.com/docs/scopes 
+      }
     });
-
-    var result = widget.parseHash(location.hash);
-    if (result && result.id_token) {
-        auth0.getProfile(result.id_token, function (err, profile) {
-          window.location.hash = "";
-          if (err) {
-            return alert('error fetching profile: ' + JSON.stringify(err));
-          }
-          // store result.id_token and profile in local storage or cookie
-
-        });
-    }
-
-    widget.signin();
-    widget.signin({
-  connections: ['facebook', 'google-oauth2', 'twitter', 'Username-Password-Authentication', 'fabrikam.com'],
-  connection_scopes: {
-    'facebook': ['public_profile', 'user_friends'],
-    'google-oauth2': ['https://www.googleapis.com/auth/orkut'],
-    // none for twitter
   }
-}
 </script>
+<button onclick="window.signin();">Login</button>
 
   </body>
 </html>
