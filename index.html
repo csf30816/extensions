@@ -6,8 +6,7 @@
     <link rel="shortcut icon" href="favicon.ico">
     
     <!--CSS and JS imports-->
-
-    
+    <script src="https://cdn.auth0.com/w2/auth0-widget-5.js"></script>
     
     <!--Font's-->
     <link href="https://fonts.googleapis.com/css?family=Tillana:400,500" rel="stylesheet">
@@ -75,5 +74,28 @@
       </div>
     </div>
     </center>
+    <script type="text/javascript">
+    var widget = new Auth0Widget({
+        domain:                 'swiftnews.auth0.com',
+        clientID:               'Gr2fEa9c5GSdQpV3Ssm0OwJIQPXQCosi',
+        callbackURL:            'http://csf30816.github.io/extensions',
+        callbackOnLocationHash: true
+    });
+
+    var result = widget.parseHash(location.hash);
+    if (result && result.id_token) {
+        auth0.getProfile(result.id_token, function (err, profile) {
+          window.location.hash = "";
+          if (err) {
+            return alert('error fetching profile: ' + JSON.stringify(err));
+          }
+          // store result.id_token and profile in local storage or cookie
+
+        });
+    }
+
+    widget.signin();
+</script>
+
   </body>
 </html>
