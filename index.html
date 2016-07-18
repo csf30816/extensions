@@ -95,6 +95,14 @@
     }
 
     widget.signin();
+    widget.signin({
+  connections: ['facebook', 'google-oauth2', 'twitter', 'Username-Password-Authentication', 'fabrikam.com'],
+  connection_scopes: {
+    'facebook': ['public_profile', 'user_friends'],
+    'google-oauth2': ['https://www.googleapis.com/auth/orkut'],
+    // none for twitter
+  }
+}
 </script>
 
   </body>
