@@ -15,3 +15,13 @@ app.use(session({ secret: 'E88bztDtzMYbBh1XQpFwddW3w_xjpN6pgFgx7P5wc8jQU-Z8i-dYv
 app.use(passport.initialize());
 app.use(passport.session());
 ...
+
+// Auth0 callback handler
+app.get('/extension',
+  passport.authenticate('auth0', { failureRedirect: '/url-if-something-fails' }),
+  function(req, res) {
+    if (!req.user) {
+      throw new Error('user null');
+    }
+    res.redirect("/user");
+  });
