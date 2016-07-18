@@ -55,9 +55,20 @@
         height: auto;
         padding: 8px 20px;
       }
+      button {
+        background-color: #f2f2f2;
+        transition: all 0.15s ease;
+        padding: 10px;
+        border-radius: 6px;
+        border: 1px solid #fcfcfc;
+      }
+      button:hover {
+        background-color: #fcfcfc;
+      }
     </style>
     <div class="header">
     <img height="50px" class="img" src="Scratchext.png">
+    <button onclick="window.signin();">Login</button>
     </div>
     <br>
     <br>
@@ -89,6 +100,6 @@
     });
   }
 </script>
-<button onclick="window.signin();">Login</button>
+
   </body>
 </html>
