@@ -80,18 +80,10 @@
         justify-content: flex-start;
         margin-top: 0;
       }
-      #a0-lock.a0-theme-default .a0-overlay.a0-active {
-background: -webkit-radial-gradientrgba(156, 156, 156, 0.98),rgba(87, 87, 87, 0.85)) rgba(70, 70, 70, 0.52);
-background: -moz-radial-gradient(rgba(156, 156, 156, 0.98),rgba(87, 87, 87, 0.85)) rgba(70, 70, 70, 0.52);
-background: radial-gradient(rgba(156, 156, 156, 0.98),rgba(87, 87, 87, 0.85)) rgba(70, 70, 70, 0.52);
-}
     </style>
     <center>
     <div class="header">
-      <ul style="padding-left: 0px;margin-left: 32.682%;margin-right: 32.682%;">
-        <li><img height="50px" class="img" src="Scratchext.png"></li>
-        <li><button id="name" onclick="window.signin(); getUsername();">Login</button></li>
-      </ul>
+      <img height="50px" class="img" src="Scratchext.png">
     </div>
     </center>
     <br>
@@ -108,24 +100,6 @@ background: radial-gradient(rgba(156, 156, 156, 0.98),rgba(87, 87, 87, 0.85)) rg
       </div>
     </div>
     </center>
-<script type="text/javascript">
-  
-  var lock = new Auth0Lock('tMa3kXkEDhGZapWiiVMVLUKOvFjsTx9R', 'swiftnews.auth0.com');
-  
-  
-  function signin() {
-    lock.show({
-        callbackURL: 'https://csf30816.github.io/extensions/'
-      , responseType: 'code'
-      , authParams: {
-        scope: 'openid email'  // Learn about scopes: https://auth0.com/docs/scopes 
-      }
-    });
-  }
-  function getUsername() {
-    document.getElementById('name').textContent = profile.name;
-  }
-</script>
 
   </body>
 </html>
