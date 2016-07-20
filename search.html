@@ -18,9 +18,13 @@
       document.getElementById("term").innerHTML = a
       document.getElementById("result").innerHTML = "<a href='https://csf30816.github.io/extensions/users/" + a + "/'>https://csf30816.github.io/extensions/users/" + a + "/</a>"
       highlight(document.getElementById("result"), a, 'highlight')
+      
     }
     
     function highlight(container,what,spanClass) {
+      var a = document.URL.substring(50, document.URL.length)
+      var b = document.getElementById("result")
+      for (a in b)
     var content = container.innerHTML,
         pattern = new RegExp('(>[^<.]*)(' + what + ')([^<.]*)','g'),
         replaceWith = '$1<span ' + ( spanClass ? 'class="' + spanClass + '"' : '' ) + '">$2</span>$3',
