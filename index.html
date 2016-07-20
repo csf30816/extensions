@@ -98,10 +98,22 @@
       <h4 style="margin-top: 0px; margin-bottom: 0px;">Authors</h4>
       </div>
       <div class="content">
+        <form id="search">
+          <input type="text" id="input" placeholder="Enter Username Here">
+          <input type="submit" value="Search">
+        </form>
         <a href="users/csf30816">Csf30816</a>
       </div>
     </div>
     </center>
+<script>
+  var a = document.getElementById('search');
+    a.addEventListener('submit',function(e) {
+    e.preventDefault();
+  var b = document.getElementById('input').value;
+  window.location.href = 'https://csf30816.github.io/extensions/users/' + b;
+});
 
+</script>
   </body>
 </html>
