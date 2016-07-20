@@ -1,1 +1,19 @@
-
+#box, a {
+  color: #1aa0d8;
+  text-decoration: none;
+  transition: all .15s ease;
+}
+#box, a:hover {
+  transition: all .15s ease;
+  background-color: #25aff4;
+}
+a {
+  color: #1aa0d8;
+  text-decoration: none;
+  transition: all .15s ease;
+}
+a:hover {
+  color: #168BBB;
+  transition: all .15s ease;
+  text-decoration: underline;
+}
