@@ -3,12 +3,14 @@
   <head>
     <title>Search</title>
   </head>
-  <body>
+  <body onload="search()">
     <p>Search results for: <b id="term"></b></p>
     
     <script>
-      var a = document.URL.substring(49, document.URL.length)
+    function search() {
+      var a = document.URL.substring(50, document.URL.length)
       document.getElementById("term").innerHTML = a
+    }
     </script>
   </body>
 </html>
