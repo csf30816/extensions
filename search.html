@@ -4,12 +4,15 @@
     <title>Search</title>
   </head>
   <body onload="search()">
-    <p>Search results for: <b id="term"></b></p>
-    
+    <h2>Search results for: <b id="term"></b></h2>
+    <h3>#1 best result:</h3>
+    <p id="result"></p>
     <script>
     function search() {
       var a = document.URL.substring(50, document.URL.length)
       document.getElementById("term").innerHTML = a
+      
+      document.getElementById("result").innerHTML = "<a href='https://csf30816.github.io/extensions/users/" + a + "/'>https://csf30816.github.io/extensions/users/<b>" + a + "</b>/</a>"
     }
     </script>
   </body>
