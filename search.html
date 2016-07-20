@@ -11,11 +11,9 @@
       var a = document.URL.substring(50, document.URL.length)
       document.getElementById("term").innerHTML = a
       document.getElementById("result").innerHTML = "<a href='https://csf30816.github.io/extensions/users/" + a + "/'>https://csf30816.github.io/extensions/users/" + a + "/</a>"
-      var c = "<b>" + a + "</b>";
-      var b = document.getElementById("result");
-      var html = b.replace(a, c);
-      
-      b.textContent = html;
+      var b = document.getElementById("result").innerHTML
+      var res = b.replace(a, "<b>" + a + "</b>");
+      document.getElementById("demo").innerHTML = res;
     }
     </script>
 
