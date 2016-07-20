@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script type="text/javascript" src="search.js"></script>
     <title>Search</title>
   </head>
   <body onload="search()">
@@ -13,8 +12,7 @@
       document.getElementById("term").innerHTML = a
       if (a != "csf30816") {
       document.getElementById("result").innerHTML = "<a href='https://csf30816.github.io/extensions/users/" + a + "/'>https://csf30816.github.io/extensions/users/" + a + "/</a>"
-      var myHighlight = new highlight("result", a);
-      myHighlight.apply("result", a);
+      
       }
     }
     </script>
