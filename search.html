@@ -7,11 +7,7 @@
         background-color: yellow;
       }
     </style>
-    <script>
-    function highlight(r, a) {
-      $(r).highlight(a);
-    }
-    </script>
+    
   </head>
   <body onload="search()">
     <h2>Search results for: <u id="term"></u></h2>
@@ -23,7 +19,7 @@
       document.getElementById("term").innerHTML = a
       document.getElementById("result").innerHTML = "<a href='https://csf30816.github.io/extensions/users/" + a + "/'>https://csf30816.github.io/extensions/users/" + a + "/</a>"
       highlight(document.getElementById("result"), a)
-      
+      $((document.getElementById("result")).highlight(a);
     }
     
     </script>
