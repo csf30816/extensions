@@ -2,6 +2,11 @@
 <html>
   <head>
     <title>Search</title>
+    <style>
+      .highlight {
+        background-color: yellow;
+      }
+    </style>
   </head>
   <body onload="search()">
     <h2>Search results for: <u id="term"></u></h2>
@@ -10,7 +15,7 @@
     function search() {
       var a = document.URL.substring(50, document.URL.length)
       document.getElementById("term").innerHTML = a
-      document.getElementById("result").innerHTML = "<a href='https://csf30816.github.io/extensions/users/" + a + "/'>https://csf30816.github.io/extensions/users/<b>" + a + "</b>/</a>"
+      document.getElementById("result").innerHTML = "<a href='https://csf30816.github.io/extensions/users/" + a + "/'>https://csf30816.github.io/extensions/users/<b class='highlight'>" + a + "</b>/</a>"
     }
     </script>
 
