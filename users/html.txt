@@ -6,7 +6,7 @@
     <link rel="shortcut icon" href="/extensions/favicon.ico">
     
     <!--CSS and JS imports-->
-    
+    <link rel="text/css" type="stylesheet" href="/extensions/links.css">
     
     <!--Font's-->
     <link href="https://fonts.googleapis.com/css?family=Tillana:400,500" rel="stylesheet">
@@ -91,20 +91,24 @@
         text-decoration: none;
       }
       .play {
-        background-image: url("/extensions/play1.png");
+        background-image: url("/play1.png");
         background-repeat: no-repeat;
         background-size: 15px 15px;
         color: transparent
       }
       .raw {
-        background-image: url("/extensions/raw.png");
+        background-image: url("/raw.png");
         background-repeat: no-repeat;
         background-size: 15px 15px;
         color: transparent
       }
+      #box::selection {
+        background-color: transparent;
+        color: inherit;
+      }
     </style>
     <div class="header">
-    <a href="/extensions"><img class="img" src="/extensions/Scratchext.png"></a>
+    <a href="/extensions"><img class="img" src="/Scratchext.png"></a>
     </div>
     <br>
     <br>
@@ -117,16 +121,16 @@
       </div>
       <div class="content">
         <center><div id="box">No Extension Selected :)</div></center>
-        <button class="button" onclick="myFunction('', '')"></button>
-        <button class="button" onclick="myFunction('', '')"></button>
+        <button class="button" onclick="myFunction('browseractions', 'Browser Actions')">Browser Actions</button>
+        <button class="button" onclick="myFunction('varactions', 'Variable Actions')">Variable Actions</button>
       </div>
     </div>
     </center>
     
     <script>
       function myFunction(i, a) {
-        var thing = "http://scratchx.org/?url=https://raw.githubusercontent.com/csf30816/extensions/gh-pages/users/..../" + i + ".js"
-        var thing2 = "https://raw.githubusercontent.com/csf30816/extensions/gh-pages/users/..../" + i + ".js"
+        var thing = "http://scratchx.org/?url=https://csf30816.github.io/extensions/users//" + i + ".js"
+        var thing2 = "https://csf30816.github.io/extensions/users/csf30816/" + i + ".js"
         document.getElementById("box").innerHTML = "<h2 style='margin-top: 0;'>" + a + "</h2><span class='play'>pla</span><a href='" + thing + "'>Run it on ScratchX</a>,  <span class='raw'>pla</span><a href='" + thing2 + "'>View raw data</a>";
       }
     </script>
