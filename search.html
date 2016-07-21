@@ -148,12 +148,13 @@ function searchPrompt(defaultText, treatAsPhrase, textColor, bgColor)
     <h2>Search results for: <u id="term"></u></h2>
     Result: <p id="result"></p>
     <div id="users">
-      csf30816
+      <csf30816 id="csf30816"></csf30816>
     </div>
     <script>
     function search() {
-      var a = document.URL.substring(52, document.URL.length)
-      var users = document.getElementById("users").contains(a);
+      var a = document.URL.substring(52, document.URL.length);
+      var span = document.getElementById(a)
+      var users = document.getElementById("users").contains(span);
       if (users) {
         document.getElementById("term").innerHTML = a
         document.getElementById("result").innerHTML = "<a href='users/" + a + "/'>https://csf30816.github.io/extensions/users/" + a + "/</a>";
