@@ -75,19 +75,19 @@ function highlightSearchTerms(searchText, treatAsPhrase, warnOnFailure, highligh
     searchArray = searchText.split(" ");
   }
   
-  if (!document.body || typeof(document.body.innerHTML) == "undefined") {
+  if (!document.getElementById("result") || typeof(document.getElementById("result").innerHTML) == "undefined") {
     if (warnOnFailure) {
       alert("Sorry, for some reason the text of this page is unavailable. Searching will not work.");
     }
     return false;
   }
   
-  var bodyText = document.body.innerHTML;
+  var bodyText = document.getElementById("result").innerHTML;
   for (var i = 0; i < searchArray.length; i++) {
     bodyText = doHighlight(bodyText, searchArray[i], highlightStartTag, highlightEndTag);
   }
   
-  document.body.innerHTML = bodyText;
+  document.getElementById("result").innerHTML = bodyText;
   return true;
 }
 
@@ -132,60 +132,6 @@ function searchPrompt(defaultText, treatAsPhrase, textColor, bgColor)
 }
 
 
-/*
- * This function takes a referer/referrer string and parses it
- * to determine if it contains any search terms. If it does, the
- * search terms are passed to the highlightSearchTerms function
- * so they can be highlighted on the current page.
- */
-function highlightGoogleSearchTerms(referrer)
-{
-  // This function has only been very lightly tested against
-  // typical Google search URLs. If you wanted the Google search
-  // terms to be automatically highlighted on a page, you could
-  // call the function in the onload event of your <body> tag, 
-  // like this:
-  //   <body onload='highlightGoogleSearchTerms(document.referrer);'>
-  
-  //var referrer = document.referrer;
-  if (!referrer) {
-    return false;
-  }
-  
-  var queryPrefix = "q=";
-  var startPos = referrer.toLowerCase().indexOf(queryPrefix);
-  if ((startPos < 0) || (startPos + queryPrefix.length == referrer.length)) {
-    return false;
-  }
-  
-  var endPos = referrer.indexOf("&", startPos);
-  if (endPos < 0) {
-    endPos = referrer.length;
-  }
-  
-  var queryString = referrer.substring(startPos + queryPrefix.length, endPos);
-  // fix the space characters
-  queryString = queryString.replace(/%20/gi, " ");
-  queryString = queryString.replace(/\+/gi, " ");
-  // remove the quotes (if you're really creative, you could search for the
-  // terms within the quotes as phrases, and everything else as single terms)
-  queryString = queryString.replace(/%22/gi, "");
-  queryString = queryString.replace(/\"/gi, "");
-  
-  return highlightSearchTerms(queryString, false);
-}
-
-
-/*
- * This function is just an easy way to test the highlightGoogleSearchTerms
- * function.
- */
-function testHighlightGoogleSearchTerms()
-{
-  var referrerString = "http://www.google.com/search?q=javascript%20highlight&start=0";
-  referrerString = prompt("Test the following referrer string:", referrerString);
-  return highlightGoogleSearchTerms(referrerString);
-}
 
 </script>
   </head>
