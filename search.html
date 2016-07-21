@@ -12,6 +12,9 @@
       a {
         text-decoration:none;
       }
+      #users {
+        visibility: hidden;
+      }
     </style>
     <script language="JavaScript">
 /*
@@ -144,14 +147,20 @@ function searchPrompt(defaultText, treatAsPhrase, textColor, bgColor)
   <body onload="search()">
     <h2>Search results for: <u id="term"></u></h2>
     Result: <p id="result"></p>
+    <div id="users">
+      csf30816
+    </div>
     <script>
     function search() {
-      
       var a = document.URL.substring(52, document.URL.length)
-      document.getElementById("term").innerHTML = a + ""
-      document.getElementById("result").innerHTML = "<a href='https://csf30816.github.io/extensions/users/" + a + "/'>https://csf30816.github.io/extensions/users/" + a + "/</a>";
-      highlightSearchTerms(a);
-      
+      var users = document.getElementById("users").contains(a);
+      if (users) {
+        document.getElementById("term").innerHTML = a
+        document.getElementById("result").innerHTML = "<a href='users/" + a + "/'>https://csf30816.github.io/extensions/users/" + a + "/</a>";
+        highlightSearchTerms(a);
+      } else {
+        document.body.innerHTML = "<h1>There is no user with the username of: " + a + ", please check your spelling!</h1><a href='#'>Go Home?</a>"
+      }
     }
     
 
