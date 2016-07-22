@@ -108,7 +108,7 @@
       }
     </style>
     <div class="header">
-    <a href="/extensions"><img class="img" src="/Scratchext.png"></a>
+    <a href="/"><img class="img" src="/Scratchext.png"></a>
     </div>
     <br>
     <br>
