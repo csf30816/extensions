@@ -1,12 +1,14 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 FRAMESET//EN">
-<HTML>
+<HTML onload="onLoad()">
 <HEAD>
 </HEAD>
 <FRAMESET ID="frame" ROWS="100%">
   
 </FRAMESET>
 <script>
+function onLoad() {
   var a = document.URL.substring(34, document.URL.length);
   document.getElementById("frame").innerHTML = "<FRAME SRC='http://www.sitelevel.com/query" + a + "'>"
+}
 </script>
 </HTML>
