@@ -1,3 +1,4 @@
+
 (function(ext) {
     ext._shutdown = function() {};
 
@@ -5,7 +6,7 @@
         return {
             status: 2,
             msg: 'Ready to use :)'
-        }
+        };
     };
     var vars = {
 };
@@ -26,7 +27,7 @@
 	vars[v] = value;
     };
     ext.create = function(v) { 
-    	var[v] = 0;
+	vars[v] = 0;
     };
     ext.change = function(v, value) {
 	vars[v] += value;
