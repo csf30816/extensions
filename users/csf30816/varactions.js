@@ -23,19 +23,23 @@
 	}
     };
     ext.set = function(v, value) {
-	vars[v] = value;
+		vars[v] = value;
     };
-    ext.create = function(v) 
-    { varHold[v] = "0"
+    ext.create = function(v) { 
+    	var[v] = "0"
     };
     ext.change = function(v, value) {
-	vars[v] += value;
+	//vars[v] += value;
+	for(var i in value){
+		vars[v] ++;
+	}
+	}
     };
     ext.read = function(v) {
-	return vars[v];
+		return vars[v];
     };
     ext.author = function(a) {
-	return '@Csf30816 made this project :)';
+		return '@Csf30816 made this project :)';
     };
 
     ScratchExtensions.register('Variable Scripts', descriptor, ext);
