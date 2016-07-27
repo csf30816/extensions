@@ -14,8 +14,8 @@
         blocks: [
 	    [' ', 'Create var %s', 'create', 'var'],
 	    [' ', 'Set Var %s to %s', 'set', 'var', '0'],
-	    [' ', 'Change %s by %n', 'change', '', 1],
-	    ['r', 'Read Var %s', 'read', ''],
+	    [' ', 'Change %s by %n', 'change', 'var', 1],
+	    ['r', 'Read Var %s', 'read', 'var'],
 	    ['r', 'Who made this?', 'author']
         ],
 
@@ -32,7 +32,6 @@
 	//vars[v] += value;
 	for(var i in value){
 		vars[v] ++;
-	}
 	}
     };
     ext.read = function(v) {
