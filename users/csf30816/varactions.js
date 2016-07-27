@@ -23,10 +23,10 @@
 	}
     };
     ext.set = function(v, value) {
-		vars[v] = value;
+	vars[v] = value;
     };
     ext.create = function(v) { 
-    	var[v] = "0"
+    	var[v] = 0;
     };
     ext.change = function(v, value) {
 	//vars[v] += value;
