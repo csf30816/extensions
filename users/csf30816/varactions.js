@@ -29,10 +29,7 @@
     	var[v] = 0;
     };
     ext.change = function(v, value) {
-	//vars[v] += value;
-	for(var i in value){
-		vars[v] ++;
-	}
+	vars[v] += value;
     };
     ext.read = function(v) {
 		return vars[v];
