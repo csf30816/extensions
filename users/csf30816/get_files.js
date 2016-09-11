@@ -10,8 +10,8 @@
 
     var descriptor = {
         blocks: [
-            [' ', 'Get file from URL: %s', 'getURL', 'http://lego.com'],
-            ['r', 'Return file contents of %s', 'rGetURL', 'http://lego.com']
+            [' ', 'Get file from URL: %s', 'getURL', 'http://phpsocial.x10.bz'],
+            ['r', 'Return file contents of %s', 'rGetURL', 'http://phpsocial.x10.bz']
         ],
 
         menus: {}
