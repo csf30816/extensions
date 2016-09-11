@@ -10,7 +10,8 @@
 
     var descriptor = {
         blocks: [
-            [' ', 'Get file from URL: %s', 'getURL', 'https://scratch.mit.edu']
+            [' ', 'Get file from URL: %s', 'getURL', 'www.lego.com'],
+            ['r', 'Return file contents of %s', 'rGetURL', 'www.lego.com']
         ],
 
         menus: {}
@@ -21,6 +22,12 @@
         xmlHttp.send();
         alert(xmlHttp.responseText);
     };
+    ext.rGetURL = function(url) {
+        var xmlHttp = new XMLHttpRequest();
+        xmlHttp.open("GET", url, false);
+        xmlHttp.send();
+        return xmlHttp.responseText;
+    }
 
     ScratchExtensions.register('Get File', descriptor, ext);
 })({});
