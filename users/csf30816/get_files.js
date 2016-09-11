@@ -23,11 +23,12 @@
         alert(xmlHttp.responseText);
     };
     ext.rGetURL = function(url) {
-        var xmlHttp = new XMLHttpRequest();
-        xmlHttp.open("GET", url, false);
-        xmlHttp.send();
-        return(xmlHttp.responseText);
-    }
+        $.ajax({
+                type: "GET",
+                url: url,
+                data: {}
+            });
+    };
 
     ScratchExtensions.register('Get File', descriptor, ext);
 })({});
