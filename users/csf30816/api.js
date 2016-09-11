@@ -11,7 +11,9 @@
     var descriptor = {
         blocks: [
             [' ', 'Follow %s', 'follow', 'csf30816'],
-            ['r', '%s s messages number', 'messages', 'csf30816']
+            ['r', '%s s messages number', 'messages', 'csf30816'],
+            ['r', 'Projects', 'projects'],
+            ['r', '☁ %s of project %s', 'cloud', 'Cloud', '10080213']
         ],
 
         menus: {}
@@ -31,9 +33,32 @@
             dataType: 'json',
             success: function (responseText) {
                 number = responseText['msg_count'];
-                return(number);
+                callback(number);
             }
         })
     }
+    ext.projects = function (callback) {
+        $.ajax({
+            url: 'https://api-staging.scratch.mit.edu/projects/count/all',
+            dataType: 'json',
+            success: function (responseText) {
+                number = responseText['count'];
+                callback(number);
+            }
+        })
+    }
+    ext.cloud = function (name, id, callback){
+		$.getJSON('https://scratch.mit.edu/varserver/' + id, function(json){
+			console.log(json);
+			for (var i=0; i<json['variables'].length; i++){
+				console.log(json['variables'][i])
+				if (json['variables'][i]['name'] == "☁ " + name){
+					console.log(json['variables'][i]['name']);
+					callback(json['variables'][i]["value"]);
+				}
+			}
+		
+		});
+	};
     ScratchExtensions.register('Scratch API', descriptor, ext);
 })({});
