@@ -11,7 +11,7 @@
     var descriptor = {
         blocks: [
             [' ', 'Follow %s', 'follow', 'csf30816'],
-            ['', '%s s messages number', 'messages', 'csf30816']
+            ['r', '%s s messages number', 'messages', 'csf30816']
         ],
 
         menus: {}
