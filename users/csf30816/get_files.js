@@ -19,14 +19,14 @@
     ext.getURL = function(url) {
         var xmlHttp = new XMLHttpRequest();
         xmlHttp.open("GET", url, false);
-        xmlhttp.setRequestHeader("Access-Control-Allow-Origin");
+        xmlhttp.setRequestHeader("Access-Control-Allow-Origin", url);
         xmlHttp.send();
         alert(xmlHttp.responseText);
     };
     ext.rGetURL = function(url) {
         var xmlHttp = new XMLHttpRequest();
         xmlHttp.open("GET", url, false);
-        xmlhttp.setRequestHeader("Access-Control-Allow-Origin");
+        xmlhttp.setRequestHeader("Access-Control-Allow-Origin", url);
         xmlHttp.send();
         return(xmlHttp.responseText);
     }
