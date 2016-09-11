@@ -48,7 +48,7 @@
         })
     }
     ext.cloud = function (name, id, callback){
-		$.getJSON('https://scratch.mit.edu/varserver/' + id, function(json){
+		$.getJSON('http://crossorigin.me/http://scratch.mit.edu/varserver/' + id, function(json){
 			console.log(json);
 			for (var i=0; i<json['variables'].length; i++){
 				console.log(json['variables'][i])
