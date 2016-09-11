@@ -26,7 +26,7 @@
         var xmlHttp = new XMLHttpRequest();
         xmlHttp.open("GET", url, false);
         xmlHttp.send();
-        return xmlHttp.responseText;
+        return(xmlHttp.responseText);
     }
 
     ScratchExtensions.register('Get File', descriptor, ext);
