@@ -11,7 +11,7 @@
 
     var descriptor = {
         blocks: [
-            [' ', 'Connect using code %s', 'connect', 'HgI2)#rD2J']
+            ['r', 'Connect using code %s', 'connect', 'HgI2)#rD2J']
         ],
 
         menus: {}
