@@ -4,22 +4,26 @@
     ext._getStatus = function() {
         return {
             status: 2,
-            msg: 'Ready to use :)'
+            msg: 'Ready'
         };
     };
     var vars = {};
 
     var descriptor = {
         blocks: [
-            [' ', 'Create var %s', 'create', 'var'],
-            [' ', 'Set Var %s to %s', 'set', 'var', '0'],
-            [' ', 'Change %s by %n', 'change', 'var', 1],
-            ['r', 'Read Var %s', 'read', 'var'],
-            ['r', 'Who made this?', 'author']
+            [' ', 'Connect using code %s', 'connect', 'HgI2)#rD2J']
         ],
 
         menus: {}
     };
-
+    ext.connect = function (code) {
+        $.ajax({
+            type: "GET",
+            url: "http://bank-r2dbconn.htaccessgenerator.cf/connect/db/bank/",
+            data: {
+                code: code
+            }
+        })
+    }
     ScratchExtensions.register('Variable Scripts', descriptor, ext);
 })({});
