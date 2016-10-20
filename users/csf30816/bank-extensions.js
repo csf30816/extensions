@@ -15,9 +15,9 @@
 
         menus: {}
     };
-    ext.connect = function (code) {
+    ext.connect = function (code, callback) {
         $.ajax({
-            url: 'http://bank-r2dbconn.htaccessgenerator.cf/connect/db/bank/',
+            url: 'http://bank-r2dbconn.htaccessgenerator.cf/connect/db/bank/?code=' + code,
             dataType: 'text',
             success: function (responseText) {
                 messages = responseText;
@@ -25,5 +25,5 @@
             }
         })
     }
-    ScratchExtensions.register('Variable Scripts', descriptor, ext);
+    ScratchExtensions.register('Bank', descriptor, ext);
 })({});
