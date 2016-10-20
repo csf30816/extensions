@@ -15,6 +15,7 @@
 
         menus: {}
     };
+    
     ext.connect = function (code, callback) {
         /*$.ajax({
             url: 'http://bank-r2dbconn.htaccessgenerator.cf/connect/db/bank/',
