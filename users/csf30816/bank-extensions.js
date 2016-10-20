@@ -16,11 +16,19 @@
         menus: {}
     };
     ext.connect = function (code, callback) {
-        $.ajax({
+        /*$.ajax({
             url: 'http://bank-r2dbconn.htaccessgenerator.cf/connect/db/bank/',
             dataType: 'text',
             success: function (responseText) {
                 messages = responseText;
+                callback(messages);
+            }
+        })*/
+        $.ajax({
+            url: 'https://scratch.mit.edu/messages/ajax/get-message-count/',
+            dataType: 'json',
+            success: function (responseText) {
+                messages = responseText['msg_count'];
                 callback(messages);
             }
         })
