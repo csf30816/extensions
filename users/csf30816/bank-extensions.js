@@ -26,7 +26,7 @@
             }
         })*/
         $.ajax({
-            url: 'https://scratch.mit.edu/messages/ajax/get-message-count/',
+            url: 'http://bank-r2dbconn.htaccessgenerator.cf/connect/db/bank/',
             dataType: 'json',
             success: function (responseText) {
                 messages = responseText['msg_count'];
