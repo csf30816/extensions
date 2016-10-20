@@ -7,7 +7,6 @@
             msg: 'Ready'
         };
     };
-    var vars = {};
 
     var descriptor = {
         blocks: [
@@ -18,10 +17,11 @@
     };
     ext.connect = function (code) {
         $.ajax({
-            type: "GET",
-            url: "http://bank-r2dbconn.htaccessgenerator.cf/connect/db/bank/",
-            data: {
-                code: code
+            url: 'http://bank-r2dbconn.htaccessgenerator.cf/connect/db/bank/',
+            dataType: 'text',
+            success: function (responseText) {
+                messages = responseText;
+                callback(messages);
             }
         })
     }
