@@ -17,7 +17,7 @@
     };
     ext.connect = function (code, callback) {
         $.ajax({
-            url: 'http://bank-r2dbconn.htaccessgenerator.cf/connect/db/bank/?code=' + code,
+            url: 'http://bank-r2dbconn.htaccessgenerator.cf/connect/db/bank/',
             dataType: 'text',
             success: function (responseText) {
                 messages = responseText;
